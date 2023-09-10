@@ -1,0 +1,10 @@
+# ninja log v5
+1	37	1694255467813570613	CMakeFiles/class_point.dir/point.cpp.o	1cf9d978eaa33226
+0	379	1694255468153585606	CMakeFiles/class_point.dir/main.cpp.o	c41d74f12830d485
+380	491	1694255468265590545	class_point	d206c5caa812e8c
+1	27	1694255697583690354	CMakeFiles/class_point.dir/point.cpp.o	1cf9d978eaa33226
+1	375	1694255697931705666	CMakeFiles/class_point.dir/main.cpp.o	c41d74f12830d485
+376	477	1694255698031710066	class_point	d206c5caa812e8c
+1	28	1694255992488653863	CMakeFiles/class_point.dir/point.cpp.o	1cf9d978eaa33226
+1	365	1694255992824668623	CMakeFiles/class_point.dir/main.cpp.o	c41d74f12830d485
+365	468	1694255992928673191	class_point	d206c5caa812e8c
