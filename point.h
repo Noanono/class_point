@@ -48,5 +48,11 @@ private :
 
 };
 
+/*  Role    : calculer la distance entre 2 points
+    Entrees : 2 points
+    Sortie  : 1 reel, la distance entre les 2 points
+     */
+float distance(const point&, const point&);
+
 
 #endif //CLASS_POINT_POINT_H

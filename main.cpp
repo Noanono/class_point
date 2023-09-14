@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 
     point a(0, 0, 'A');
+    point b(1, 1, 'B');
     int ax, ay;
 
     cout << "Entrez les nouvelles coordonées (abscisse puis ordonee) : " << endl;
@@ -20,6 +21,8 @@ int main() {
         cout << "Le point " << a.get_nom() << " n'est pas situe en (0, 0)." << endl;
         cout << "Ce point est situe en (" << a.get_abscise() << ", " << a.get_ordonee() << ")." << endl;
     }
+
+    cout << "La distance entre les points " << a.get_nom() << " et " << b.get_nom() << " est de " << distance(a, b) << "." << endl;
 
     return 0;
 }
