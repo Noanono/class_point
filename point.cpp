@@ -1,6 +1,8 @@
 //
 // Created by noah on 09/09/23.
 //
+#include <iostream>
+using namespace std;
 
 #include "point.h"
 
@@ -31,5 +33,9 @@ int point::get_abscise() const {
 
 int point::get_ordonee() const {
     return y;
+}
+
+void point::afficher() const {
+    cout << "Le point " << nom << " est situe en (" << x << ", " << y << ")." << endl;
 }
 

@@ -20,6 +20,11 @@ public :
     Sortie  : true si le point est en 0, 0 faux sinon
      */
     bool a_0() const;
+    /*  Role    : afficher les coordonees du point (x, y)
+    Entrees : vide
+    Sortie  : vide
+     */
+    void afficher() const;
     /*  Role    : renvoie le nom du point
     Entrees : vide
     Sortie  : 1 caractere, le nom du point
