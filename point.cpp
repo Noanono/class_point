@@ -40,6 +40,10 @@ void point::afficher() const {
     cout << "Le point " << nom << " est situe en (" << x << ", " << y << ")." << endl;
 }
 
-float distance(const point& p1, const point& p2) {
-    return sqrt(pow(p2.get_abscise() - p1.get_abscise(), 2) + pow(p2.get_ordonee() - p1.get_ordonee(), 2));
+point::~point() {
+    cout << "Le point " << nom << " a ete detruit." << endl;
+}
+
+float point::distance(const point &p) const {
+    return sqrt(pow(x - p.get_abscise(), 2) + pow(y - p.get_ordonee(), 2));
 }

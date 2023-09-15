@@ -10,6 +10,7 @@ class point {
 public :
     point();
     point(int, int, char);
+    ~point();
     /*  Role    : changer les coordonees du point
     Entrees : 2 entiers, l'abscise puis l'ordonee
     Sortie  : vide
@@ -25,6 +26,11 @@ public :
     Sortie  : vide
      */
     void afficher() const;
+    /*  Role    : renvoie la distance entre le point et un autre point
+    Entrees : 1 point
+    Sortie  : 1 reel, la distance entre les 2 points
+     */
+    float distance(const point&) const;
     /*  Role    : renvoie le nom du point
     Entrees : vide
     Sortie  : 1 caractere, le nom du point
