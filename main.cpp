@@ -3,6 +3,7 @@ using namespace std;
 
 #include "point.h"
 #include "cercle.h"
+#include "heure.h"
 
 int main() {
 
@@ -58,7 +59,7 @@ int main() {
     delete[] tab_p;*/
 
     /*-----------------Cercle-----------------*/
-
+    /*
     cercle c1;
     c1.afficher();
 
@@ -88,7 +89,11 @@ int main() {
     c2.set_centre(p3);
     c2.set_rayon(30);
 
-    cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;
+    cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;*/
+
+    /*-----------------Heure-----------------*/
+
+
 
     return 0;
 }

@@ -7,4 +7,6 @@ add_executable(class_point main.cpp
         point.cpp
         point.h
         cercle.cpp
-        cercle.h)
+        cercle.h
+        heure.cpp
+        heure.h)

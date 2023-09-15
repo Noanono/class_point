@@ -67,6 +67,12 @@ build CMakeFiles/class_point.dir/cercle.cpp.o: CXX_COMPILER__class_point_unscann
   OBJECT_DIR = CMakeFiles/class_point.dir
   OBJECT_FILE_DIR = CMakeFiles/class_point.dir
 
+build CMakeFiles/class_point.dir/heure.cpp.o: CXX_COMPILER__class_point_unscanned_Debug /home/noah/Documents/CiTiSE_2A/IUT/POO_S3/class_point/heure.cpp || cmake_object_order_depends_target_class_point
+  DEP_FILE = CMakeFiles/class_point.dir/heure.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/class_point.dir
+  OBJECT_FILE_DIR = CMakeFiles/class_point.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target class_point
@@ -75,7 +81,7 @@ build CMakeFiles/class_point.dir/cercle.cpp.o: CXX_COMPILER__class_point_unscann
 #############################################
 # Link the executable class_point
 
-build class_point: CXX_EXECUTABLE_LINKER__class_point_Debug CMakeFiles/class_point.dir/main.cpp.o CMakeFiles/class_point.dir/point.cpp.o CMakeFiles/class_point.dir/cercle.cpp.o
+build class_point: CXX_EXECUTABLE_LINKER__class_point_Debug CMakeFiles/class_point.dir/main.cpp.o CMakeFiles/class_point.dir/point.cpp.o CMakeFiles/class_point.dir/cercle.cpp.o CMakeFiles/class_point.dir/heure.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/class_point.dir
   POST_BUILD = :
