@@ -51,3 +51,15 @@ point::~point() {
 float point::distance(const point &p) const {
     return sqrt(pow(x - p.get_abscise(), 2) + pow(y - p.get_ordonee(), 2));
 }
+
+void point::set_ordonee(int sy) {
+    y = sy;
+}
+
+void point::set_abscise(int sx) {
+    x = sx;
+}
+
+void point::set_nom(char snom) {
+    nom = snom;
+}

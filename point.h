@@ -46,6 +46,21 @@ public :
     Sortie  : 1 entier, la variable y du point
      */
     int get_ordonee() const;
+    /*  Role    : modifie le nom du point
+    Entrees : 1 caractere, le nouveau nom du point
+    Sortie  : vide
+     */
+    void set_nom(char);
+    /*  Role    : modifie la variable x du point
+    Entrees : 1 entier, la nouvelle variable x du point
+    Sortie  : vide
+     */
+    void set_abscise(int);
+    /*  Role    : modifie la variable y du point
+    Entrees : 1 entier, la nouvelle variable y du point
+    Sortie  : vide
+     */
+    void set_ordonee(int);
 
 private :
     int x{};
