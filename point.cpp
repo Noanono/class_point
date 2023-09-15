@@ -7,9 +7,13 @@ using namespace std;
 
 #include "point.h"
 
-point::point(void) = default;
+point::point(){
+    x = 0;
+    y = 0;
+    nom = ' ';
+};
 
-point::point(int sx, int sy, char snom) {
+point::point(char snom, int sx, int sy) {
     x = sx;
     y = sy;
     nom = snom;

@@ -5,8 +5,8 @@ using namespace std;
 
 int main() {
 
-    point a(0, 0, 'A');
-    point b(1, 1, 'B');
+    point a('A');
+    point b('B', 1, 1);
     point * tab_p;
     char nom;
     int ax, ay, nb_points;
@@ -36,21 +36,23 @@ int main() {
         cin >> ax >> ay;
         cout << "Entrez le nom du point : " << endl;
         cin >> nom;
-        c = new point(ax, ay, nom);
+        c = new point(nom, ax, ay);
         tab_p[i] = *c;
         delete c;
     }
 
-    float dist_min = distance(tab_p[1], tab_p[0]);
+    float dist_min = tab_p->distance(tab_p[1]);
     int index_min = 1;
     for (int i = 2; i < nb_points; i++){
-        if (distance(tab_p[i], tab_p[0]) < dist_min){
-            dist_min = tab_p[0].distance(tab_p[i]);
+        if (tab_p->distance(tab_p[i]) < dist_min){
+            dist_min = tab_p->distance(tab_p[i]);
             index_min = i;
         }
     }
 
     cout << "Le point le plus proche du point " << tab_p[0].get_nom() << " est le point " << tab_p[index_min].get_nom() << "." << endl;
+
+    delete[] tab_p;
 
     return 0;
 }

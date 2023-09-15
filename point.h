@@ -9,7 +9,7 @@
 class point {
 public :
     point();
-    point(int, int, char);
+    point(char, int =0, int =0);
     ~point();
     /*  Role    : changer les coordonees du point
     Entrees : 2 entiers, l'abscise puis l'ordonee
