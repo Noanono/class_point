@@ -2,14 +2,17 @@
 // Created by noah on 15/09/23.
 //
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 #include "heure.h"
 
 Heure::Heure() {
-    heure = 0;
-    minute = 0;
-    seconde = 0;
+    time_t now = time(0); //reccupere la difference de temps en secondes depuis 1970
+    tm *ltm = localtime(&now); //convertit en heure locale
+    heure = ltm->tm_hour; //reccupere l'heure de la conversion
+    minute = ltm->tm_min; //reccupere les minutes de la conversion
+    seconde = ltm->tm_sec; //reccupere les secondes de la conversion
 }
 
 Heure::Heure(int sh, int sm, int ss) {

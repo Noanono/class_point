@@ -93,6 +93,8 @@ int main() {
 
     /*-----------------Heure-----------------*/
 
+    Heure h1;
+    h1.afficher();
 
 
     return 0;
