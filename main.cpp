@@ -2,9 +2,12 @@
 using namespace std;
 
 #include "point.h"
+#include "cercle.h"
 
 int main() {
 
+    /*-----------------Point-----------------*/
+    /*
     point a('A');
     point b('B', 1, 1);
     point * tab_p;
@@ -52,7 +55,40 @@ int main() {
 
     cout << "Le point le plus proche du point " << tab_p[0].get_nom() << " est le point " << tab_p[index_min].get_nom() << "." << endl;
 
-    delete[] tab_p;
+    delete[] tab_p;*/
+
+    /*-----------------Cercle-----------------*/
+
+    cercle c1;
+    c1.afficher();
+
+    point p1('A', 1, 2);
+    cercle c2(p1, 5);
+    c2.afficher();
+
+    cout << "Le perimetre du cercle est de " << c2.perimetre() << " et sa surface est de " << c2.surface() << "." << endl;
+
+    c2.set_rayon(10);
+    c2.afficher();
+
+    point p2('B', 3, 4);
+    c2.set_centre(p2);
+    c2.afficher();
+
+    c2.deplacer(1, 1);
+    c2.afficher();
+
+    cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;
+
+    c2.set_centre(point('C', 5, 6));
+    c2.set_rayon(20);
+    cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;
+
+    point p3('D', 7, 8);
+    c2.set_centre(p3);
+    c2.set_rayon(30);
+
+    cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;
 
     return 0;
 }
