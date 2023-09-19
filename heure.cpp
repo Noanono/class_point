@@ -42,7 +42,7 @@ void Heure::conv_sh() {
 }
 
 int Heure::diff(const Heure &h) const {
-    return abs(seconde - h.seconde);
+    return abs(seconde - h.get_seconde());
 }
 
 void Heure::set_heure(int sh) {
