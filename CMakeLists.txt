@@ -9,4 +9,6 @@ add_executable(class_point main.cpp
         cercle.cpp
         cercle.h
         heure.cpp
-        heure.h)
+        heure.h
+        polygone.cpp
+        polygone.h)
