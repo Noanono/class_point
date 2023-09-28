@@ -7,24 +7,13 @@ using namespace std;
 
 #include "point.h"
 
-point::point(){
-    x = 0;
-    y = 0;
-    nom = ' ';
-};
-
-point::point(char snom, int sx, int sy) {
+point::point(int sx, int sy) {
     x = sx;
     y = sy;
-    nom = snom;
 }
 
 bool point::a_0() const{
     return (x==0 && y==0);
-}
-
-char point::get_nom() const {
-    return nom;
 }
 
 void point::deplacer(int nx, int ny) {
@@ -41,11 +30,11 @@ int point::get_ordonee() const {
 }
 
 void point::afficher() const {
-    cout << "Le point " << nom << " est situe en (" << x << ", " << y << ")." << endl;
+    cout << "Le point est situe en (" << x << ", " << y << ")." << endl;
 }
 
 point::~point() {
-    cout << "Le point " << nom << " a ete detruit." << endl;
+    cout << "Le point a ete detruit." << endl;
 }
 
 float point::distance(const point &p) const {
@@ -58,8 +47,4 @@ void point::set_ordonee(int sy) {
 
 void point::set_abscise(int sx) {
     x = sx;
-}
-
-void point::set_nom(char snom) {
-    nom = snom;
 }

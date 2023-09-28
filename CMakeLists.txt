@@ -11,4 +11,6 @@ add_executable(class_point main.cpp
         heure.cpp
         heure.h
         polygone.cpp
-        polygone.h)
+        polygone.h
+        point_nomme.cpp
+        point_nomme.h)

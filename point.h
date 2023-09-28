@@ -8,8 +8,7 @@
 
 class point {
 public :
-    point();
-    point(char, int =0, int =0);
+    point(int =0, int =0);
     ~point();
     /*  Role    : changer les coordonees du point
     Entrees : 2 entiers, l'abscise puis l'ordonee
@@ -31,11 +30,6 @@ public :
     Sortie  : 1 reel, la distance entre les 2 points
      */
     float distance(const point&) const;
-    /*  Role    : renvoie le nom du point
-    Entrees : vide
-    Sortie  : 1 caractere, le nom du point
-     */
-    char get_nom() const;
     /*  Role    : renvoie la variable x du point
     Entrees : vide
     Sortie  : 1 entier, la variable x du point
@@ -46,11 +40,6 @@ public :
     Sortie  : 1 entier, la variable y du point
      */
     int get_ordonee() const;
-    /*  Role    : modifie le nom du point
-    Entrees : 1 caractere, le nouveau nom du point
-    Sortie  : vide
-     */
-    void set_nom(char);
     /*  Role    : modifie la variable x du point
     Entrees : 1 entier, la nouvelle variable x du point
     Sortie  : vide
@@ -65,7 +54,6 @@ public :
 private :
     int x{};
     int y{};
-    char nom{};
 
 };
 

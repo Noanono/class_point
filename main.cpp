@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "point.h"
+#include "point_nomme.h"
 #include "cercle.h"
 #include "heure.h"
 
@@ -9,10 +9,9 @@ int main() {
 
     /*-----------------Point-----------------*/
     /*
-    point a('A');
-    point b('B', 1, 1);
+    point a;
+    point b(1, 1);
     point * tab_p;
-    char nom;
     int ax, ay, nb_points;
 
     cout << "Entrez les nouvelles coordonées (abscisse puis ordonee) : " << endl;
@@ -21,9 +20,9 @@ int main() {
     a.deplacer(ax, ay);
 
     if (a.a_0()){
-        cout << "Le point " << a.get_nom() << " est situe en (0, 0)." << endl;
+        cout << "Le point est situe en (0, 0)." << endl;
     }else{
-        cout << "Le point " << a.get_nom() << " n'est pas situe en (0, 0)." << endl;
+        cout << "Le point n'est pas situe en (0, 0)." << endl;
         a.afficher();
     }
 
@@ -38,9 +37,7 @@ int main() {
         point * c;
         cout << "Entrez les coordonées du point (abscisse puis ordonee) : " << endl;
         cin >> ax >> ay;
-        cout << "Entrez le nom du point : " << endl;
-        cin >> nom;
-        c = new point(nom, ax, ay);
+        c = new point(ax, ay);
         tab_p[i] = *c;
         delete c;
     }
@@ -54,7 +51,7 @@ int main() {
         }
     }
 
-    cout << "Le point le plus proche du point " << tab_p[0].get_nom() << " est le point " << tab_p[index_min].get_nom() << "." << endl;
+    cout << "Le point le plus proche est le point " << index_min << "." << endl;
 
     delete[] tab_p;*/
 
@@ -63,7 +60,7 @@ int main() {
     cercle c1;
     c1.afficher();
 
-    point p1('A', 1, 2);
+    point p1(1, 2);
     cercle c2(p1, 5);
     c2.afficher();
 
@@ -81,11 +78,11 @@ int main() {
 
     cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;
 
-    c2.set_centre(point('C', 5, 6));
+    c2.set_centre(point(5, 6));
     c2.set_rayon(20);
     cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;
 
-    point p3('D', 7, 8);
+    point p3(7, 8);
     c2.set_centre(p3);
     c2.set_rayon(30);
 
@@ -93,9 +90,38 @@ int main() {
 
     /*-----------------Heure-----------------*/
 
-    Heure h1;
-    h1.afficher();
+    /*Heure h1;
+    h1.afficher();*/
 
+    /*----------------Point_Nomme------------*/
+
+    point *p;
+    int pp;
+    int px, py, t;
+    char *pnom;
+
+    cout << "Voulez vous un point classique (0) ou un point nomme (1) ?" << endl << "Si votre reponse ne correspond pas ce sera un point nomme" << endl;
+    cin >> pp;
+
+    if(pp){
+        cout << "Combien de caractere a le nom de votre point ?" << endl;
+        cin >> t;
+        pnom = new char[t];
+        cout << "Entrez le nom de votre point :" << endl;
+        cin >> pnom;
+        p = new point_nomme(pnom, t);
+    }else{
+        p = new point;
+    }
+
+    cout << "Ou voulez placer votre point ? (x puis y)" << endl;
+    cin >> px >> py;
+
+    p->deplacer(px, py);
+
+    p->afficher();
+
+    delete p, pnom;
 
     return 0;
 }

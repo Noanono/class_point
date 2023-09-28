@@ -30,7 +30,7 @@ void polygone::saisir() {
         cout << "Entrez les coordonées du point (abscisse puis ordonee) : " << endl;
         cin >> ax >> ay;
         nom = (char)(i+1);
-        c = new point(nom, ax, ay);
+        c = new point(ax, ay);
         points[i] = *c;
         delete c;
     }
