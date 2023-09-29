@@ -9,7 +9,7 @@
 class point {
 public :
     point(int =0, int =0);
-    ~point();
+    virtual ~point(); // Je met virtual pour que les pointeurs de point_nomme puissent appeler le destructeur de point_nomme
     /*  Role    : changer les coordonees du point
     Entrees : 2 entiers, l'abscise puis l'ordonee
     Sortie  : vide
