@@ -120,6 +120,13 @@ int main() {
 
     p->deplacer(px, py);
 
+    pnom = new char[2];
+
+    cout << "Entrez un nouveau nom de taille 2:" << endl;
+    cin >> pnom;
+
+    p->set_nom(pnom, 2);
+
     p->afficher();
 
     delete p;

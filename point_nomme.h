@@ -14,13 +14,14 @@ private:
 
 public:
     point_nomme();
-    point_nomme(char*, int = 1);
+    point_nomme(char*, int =1);
     ~point_nomme();
     /*  Role    : Afficher le point
     Entrees : vide
     Sortie  : vide
      */
     void afficher() const;
+    void set_nom(char*, int =1);
 
 };
 

@@ -26,3 +26,11 @@ void point_nomme::afficher() const {
     cout << "Le nom du point est : " << *nom << endl;
     point::afficher();
 }
+
+void point_nomme::set_nom(char *snom, int t) {
+    delete []nom;
+    nom = new char[t];
+    for(int i = 0; i < t; i++){
+        nom[i] = snom[i];
+    }
+}
