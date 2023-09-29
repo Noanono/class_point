@@ -24,7 +24,7 @@ public :
     Entrees : vide
     Sortie  : vide
      */
-    void afficher() const;
+    virtual void afficher() const;
     /*  Role    : renvoie la distance entre le point et un autre point
     Entrees : 1 point
     Sortie  : 1 reel, la distance entre les 2 points

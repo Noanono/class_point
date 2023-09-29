@@ -110,6 +110,7 @@ int main() {
         cout << "Entrez le nom de votre point :" << endl;
         cin >> pnom;
         p = new point_nomme(pnom, t);
+        delete []pnom;
     }else{
         p = new point;
     }
@@ -121,7 +122,7 @@ int main() {
 
     p->afficher();
 
-    delete p, pnom;
+    delete p;
 
     return 0;
 }
