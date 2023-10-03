@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-    /*-----------------Point-----------------*/
+    /*--------------------------------------------------Point---------------------------------------------------------*/
     /*
     point a;
     point b(1, 1);
@@ -55,7 +55,7 @@ int main() {
 
     delete[] tab_p;*/
 
-    /*-----------------Cercle-----------------*/
+    /*--------------------------------------------------Cercle--------------------------------------------------------*/
     /*
     cercle c1;
     c1.afficher();
@@ -88,52 +88,81 @@ int main() {
 
     cout << "Le rayon du cercle est de " << c2.get_rayon() << " et son centre est en (" << c2.get_centre().get_abscise() << ", " << c2.get_centre().get_ordonee() << ")." << endl;*/
 
-    /*-----------------Heure-----------------*/
+    /*------------------------------------------------------Heure-----------------------------------------------------*/
 
     /*Heure h1;
     h1.afficher();*/
 
-    /*----------------Point_Nomme------------*/
+    /*---------------------------------------------------Point_Nomme--------------------------------------------------*/
 
-    point *p;
+    /*point *p, *tab_p;
     int pp;
-    int px, py, t;
+    int px, py, t, nb_points;
     char *pnom;
 
-    cout << "Voulez vous un point classique (0) ou un point nomme (1) ?" << endl << "Si votre reponse ne correspond pas ce sera un point nomme" << endl;
+    cout << "Voulez vous des points classiques (0) ou des points nommes (1) ?" << endl
+         << "Si votre reponse ne correspond pas ce sera un point nomme" << endl;
     cin >> pp;
 
-    if(pp){
-        cout << "Combien de caractere a le nom de votre point ?" << endl;
-        cin >> t;
-        pnom = new char[t];
-        cout << "Entrez le nom de votre point :" << endl;
-        cin >> pnom;
-        p = new point_nomme(pnom, t);
-        delete []pnom;
-    }else{
-        p = new point;
+    cout << "Combien de points voulez vous creer ?" << endl;
+    cin >> nb_points;
+
+    if (pp) {
+        tab_p = new point_nomme[nb_points];
+    } else {
+        tab_p = new point[nb_points];
     }
 
-    cout << "Ou voulez placer votre point ? (x puis y)" << endl;
-    cin >> px >> py;
+    for (int i = 0; i < nb_points; i++) {
+        if (pp) {
+            cout << "Combien de caractere a le nom de votre point ?" << endl;
+            cin >> t;
+            pnom = new char[t];
+            cout << "Entrez le nom de votre point :" << endl;
+            cin >> pnom;
+            p = new point_nomme(pnom, t);
+            tab_p[i] = *p;
+            delete[]pnom;
+        }else{
+            p = new point;
+        }
 
-    p->deplacer(px, py);
-    p->afficher();
+        cout << "Ou voulez placer votre point ? (x puis y)" << endl;
+        cin >> px >> py;
 
-    if(pp) {
-        pnom = new char[2];
-
-        cout << "Entrez un nouveau nom de taille 2:" << endl;
-        cin >> pnom;
-
-        p->set_nom(pnom, 2);
+        p->deplacer(px, py);
         p->afficher();
 
-        delete []pnom;
+        if (pp) {
+            pnom = new char[2];
+
+            cout << "Entrez un nouveau nom de taille 2:" << endl;
+            cin >> pnom;
+
+            p->set_nom(pnom, 2);
+            p->afficher();
+
+            delete[]pnom;
+        }
+
+        delete p;
     }
 
-    delete p;
+    delete []tab_p;*/
+
+    /*----------------------------------------------Heure_operateur---------------------------------------------------*/
+
+    Heure h1(1, 59, 59), h2(0, 0, 62), h3;
+    h3 = h1 + h2;
+
+    cout << "h1 :" << endl;
+    h1.afficher();
+
+    cout << "h2 :" << endl;
+    h2.afficher();
+
+    cout << "h3 (h1 + h2):" << endl;
+    h3.afficher();
 
     return 0;
 }

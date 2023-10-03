@@ -14,7 +14,8 @@ private:
 
 public:
     Heure();
-    Heure(int, int, int);
+    Heure(int, int =0, int =0);
+    Heure operator+(const Heure&) const;
     ~Heure();
     /*  Role    : afficher l'heure au format hh:mm:ss
     Entrees : vide
