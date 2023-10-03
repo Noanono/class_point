@@ -50,6 +50,7 @@ public :
     Sortie  : vide
      */
     void set_ordonee(int);
+    virtual void set_nom(char*, int =1){};
 
 private :
     int x{};

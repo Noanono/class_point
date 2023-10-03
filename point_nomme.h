@@ -11,6 +11,7 @@
 class point_nomme : public point {
 private:
     char *nom;
+    int taille_nom;
 
 public:
     point_nomme();

@@ -8,6 +8,7 @@ using namespace std;
 
 point_nomme::point_nomme(){
     nom = nullptr;
+    taille_nom = 0;
 }
 
 point_nomme::point_nomme(char *snom, int t){
@@ -15,6 +16,7 @@ point_nomme::point_nomme(char *snom, int t){
     for(int i = 0; i < t; i++){
         nom[i] = snom[i];
     }
+    taille_nom = t;
 }
 
 point_nomme::~point_nomme(){
@@ -23,7 +25,11 @@ point_nomme::~point_nomme(){
 }
 
 void point_nomme::afficher() const {
-    cout << "Le nom du point est : " << *nom << endl;
+    cout << "Le nom du point est : ";
+    for(int i =0; i < taille_nom; i++){
+        cout << nom[i];
+    }
+    cout << endl;
     point::afficher();
 }
 
@@ -33,4 +39,5 @@ void point_nomme::set_nom(char *snom, int t) {
     for(int i = 0; i < t; i++){
         nom[i] = snom[i];
     }
+    taille_nom = t;
 }
